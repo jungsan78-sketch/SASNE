@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="30%" r="90%">
+      <stop offset="0" stop-color="#1a2233"/>
+      <stop offset="1" stop-color="#070a10"/>
+    </radialGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7D26A"/>
+      <stop offset="1" stop-color="#B8892A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.28">
+    <circle cx="980" cy="180" r="220" fill="#0f1725"/>
+    <circle cx="280" cy="520" r="260" fill="#0f1725"/>
+  </g>
+  <text x="84" y="290" font-family="Noto Sans KR, system-ui, sans-serif" font-size="76" font-weight="900" fill="url(#g)">정산 • 영상 편집자</text>
+  <text x="84" y="370" font-family="Noto Sans KR, system-ui, sans-serif" font-size="36" font-weight="400" fill="#cfd6e6">쇼릴 · 작업물 · 채널 운영 · 썸네일/디자인 · 방송 세팅</text>
+  <text x="84" y="510" font-family="Noto Sans KR, system-ui, sans-serif" font-size="28" font-weight="300" fill="#9aa6bf">jungpulse.creatorlink.net 기반 커리어 요약 템플릿</text>
+</svg>
