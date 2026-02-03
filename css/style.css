@@ -584,23 +584,16 @@ a{color:inherit;text-decoration:none}
 
 
 .accentline{
-  position: relative;
   display: inline-block;
   padding: 0 .02em;
-  color: rgba(255,255,255,.98);
+  background: linear-gradient(90deg, #7DD3FC 0%, #60A5FA 45%, #A78BFA 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 18px rgba(96,165,250,.20);
 }
-.accentline::after{
-  content:"";
-  position:absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.18em;
-  height: 0.14em;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(240,216,150,.0), rgba(240,216,150,.95), rgba(200,160,70,.95), rgba(240,216,150,.0));
-  box-shadow: 0 0 18px rgba(240,216,150,.22);
-  opacity: .95;
-}
+.accentline::after{ display:none !important; content:none !important; }
 .gradgold{
   background: linear-gradient(90deg, #FFE38C 0%, #FFB800 38%, #FFF2C7 70%, #FFD24A 100%);
   -webkit-background-clip: text;
