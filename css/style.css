@@ -582,6 +582,25 @@ a{color:inherit;text-decoration:none}
 
 /* v6: gradient headline text */
 
+
+.accentline{
+  position: relative;
+  display: inline-block;
+  padding: 0 .02em;
+  color: rgba(255,255,255,.98);
+}
+.accentline::after{
+  content:"";
+  position:absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.18em;
+  height: 0.14em;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(240,216,150,.0), rgba(240,216,150,.95), rgba(200,160,70,.95), rgba(240,216,150,.0));
+  box-shadow: 0 0 18px rgba(240,216,150,.22);
+  opacity: .95;
+}
 .gradgold{
   background: linear-gradient(90deg, #FFE38C 0%, #FFB800 38%, #FFF2C7 70%, #FFD24A 100%);
   -webkit-background-clip: text;
@@ -611,11 +630,19 @@ a{color:inherit;text-decoration:none}
   text-shadow: 0 22px 70px rgba(0,0,0,.62);
 }
 .hero-line1{
-  font-size: clamp(44px, 6vw, 86px);
+  font-size: clamp(16px, 1.6vw, 22px);
+  font-weight: 800;
+  color: rgba(255,255,255,.78);
+  letter-spacing: .02em;
 }
 .hero-line2{
   margin-top: 14px;
-  font-size: clamp(38px, 5.3vw, 78px);
+  font-size: clamp(40px, 6vw, 92px);
+  line-height: 1.02;
+  letter-spacing: -0.6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .hero-exp{
   margin: 26px auto 0;
