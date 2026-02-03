@@ -640,9 +640,10 @@ a{color:inherit;text-decoration:none}
   font-size: clamp(40px, 6vw, 92px);
   line-height: 1.02;
   letter-spacing: -0.6px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  word-break: keep-all;
 }
 .hero-exp{
   margin: 26px auto 0;
