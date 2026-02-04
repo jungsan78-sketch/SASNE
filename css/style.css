@@ -1073,3 +1073,28 @@ a{color:inherit;text-decoration:none}
     text-shadow: 0 10px 28px rgba(0,0,0,.35);
   }
 }
+
+/* ===== PATCH (2026-02-04): NAV FIXES =====
+   1) Mobile: ensure navlinks are visible (was hidden by earlier @media max-width:900px)
+   2) Desktop: keep top menu always visible while scrolling (force fixed header)
+   NOTE: This block is appended to avoid touching existing title styles.
+*/
+
+/* 1) Mobile nav visibility + horizontal scroll */
+@media (max-width: 720px){
+  .navlinks{ display:flex !important; }
+}
+
+/* 2) Keep top menu visible on PC while scrolling */
+@media (min-width: 721px){
+  .topbar{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999 !important;
+  }
+  body{
+    padding-top: 64px; /* matches .nav height */
+  }
+}
