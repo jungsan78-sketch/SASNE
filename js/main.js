@@ -8,6 +8,14 @@ if(menuButton&&menu){
     menuButton.setAttribute('aria-expanded',String(open));
     menuButton.textContent=open?'CLOSE':'MENU';
   });
+  document.addEventListener('keydown',(event)=>{
+    if(event.key==='Escape'&&menu.classList.contains('open')){
+      menu.classList.remove('open');
+      menuButton.setAttribute('aria-expanded','false');
+      menuButton.textContent='MENU';
+      menuButton.focus();
+    }
+  });
 }
 
 const revealItems=document.querySelectorAll('.reveal');
