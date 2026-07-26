@@ -32,7 +32,8 @@ const currentPage=location.pathname.split('/').pop()||'index.html';
 const mobileItems=[
   ['index.html','⌂','홈'],
   ['about.html','○','소개'],
-  ['works.html','▦','프로젝트'],
+  ['creators.html','◉','파트너'],
+  ['works.html','▦','워크'],
   ['contact.html','↗','문의']
 ];
 const mobileDock=document.createElement('nav');
