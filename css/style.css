@@ -214,3 +214,82 @@
   .roster-card span{font-size:6px}
   .roster-note{margin:0 10px 10px;padding:70px 20px;border-radius:28px}
 }
+
+/* Focused Korean-first revision */
+.compact-home{background:#fff}
+.compact-home main{padding:0}
+.brand-hero{height:calc(100svh - 82px);min-height:620px;position:relative;overflow:hidden;background:#07090d;color:#fff}
+.brand-hero-media{position:absolute;inset:0}
+.brand-hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 45%;filter:saturate(.65) contrast(1.08)}
+.brand-hero-shade{position:absolute;inset:0;background:rgba(4,6,10,.72)}
+.brand-hero-copy{position:absolute;z-index:2;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.brand-hero-copy>img{width:min(72vw,790px);max-width:none;height:auto;margin:-40px 0}
+.brand-hero-copy p{margin:0;color:#d9dde5;font-size:15px;line-height:1.9;font-weight:600;letter-spacing:.02em}
+.scroll-hint{position:absolute;z-index:2;bottom:30px;left:50%;transform:translateX(-50%);color:#9096a2;font-size:10px}
+.scroll-hint::after{content:"";display:block;width:1px;height:35px;margin:10px auto 0;background:rgba(255,255,255,.5)}
+.compact-intro{max-width:1380px;margin:auto;padding:145px 28px 95px;display:grid;grid-template-columns:1.25fr .75fr;gap:90px;align-items:end}
+.compact-intro h1{margin:0;font-size:clamp(50px,6vw,86px);line-height:1.03;letter-spacing:-.07em;word-break:keep-all}
+.compact-intro p{max-width:490px;margin:0 0 8px;color:#687080;font-size:17px}
+.compact-services{max-width:1380px;margin:auto;padding:0 28px 145px;display:grid;grid-template-columns:repeat(4,1fr)}
+.compact-service{min-height:370px;padding:32px 30px;display:flex;flex-direction:column;border-right:1px solid rgba(17,21,42,.1);transition:transform .25s}
+.compact-service:last-child{border:0}.compact-service:hover{transform:translateY(-7px)}
+.compact-service>span{font:800 10px Manrope,sans-serif;color:#667085}
+.compact-service h2{margin:auto 0 15px;font-size:34px;letter-spacing:-.05em}
+.compact-service p{margin:0 0 4px;color:#50596a;font-size:14px}
+.compact-service.production{background:#e8edff}.compact-service.channel{background:#0b0d12;color:#fff}.compact-service.channel p,.compact-service.channel>span{color:#aeb5c1}.compact-service.data{background:#dff7ee}.compact-service.platform{background:#ffeadd}
+.compact-footer{height:135px;padding:32px max(28px,calc((100vw - 1380px)/2));display:flex;align-items:center;justify-content:space-between;background:#080a0f;color:#737b87}
+.compact-footer img{width:135px}.compact-footer span{font:700 9px Manrope,sans-serif;letter-spacing:.12em}.compact-footer i{font-style:normal}
+.case-number{margin:0 0 28px!important;color:var(--blue)!important;font:800 11px Manrope,sans-serif!important;letter-spacing:.12em}
+
+/* Clean partner icons */
+.partner-title{max-width:1380px;margin:auto;padding:120px 28px 62px;border-bottom:1px solid #e1e4e9}
+.partner-title h1{font-size:clamp(50px,6vw,82px);line-height:1.05;letter-spacing:-.065em;margin:0}
+.partner-title p{margin:24px 0 0;color:#6c7482;font-size:16px}
+.partner-list{max-width:1380px;margin:auto;padding:65px 28px 140px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.partner-card{min-height:150px;padding:25px 26px;display:grid;grid-template-columns:78px 1fr auto;gap:20px;align-items:center;border:1px solid #e2e5ea;border-radius:22px;background:#fff;transition:.25s}
+.partner-card:hover{transform:translateY(-4px);box-shadow:0 18px 45px rgba(37,46,72,.09);border-color:#ccd3df}
+.partner-card>img{width:78px;height:78px;border-radius:50%;object-fit:cover;background:#eef0f4}
+.partner-card h2{font-size:22px;letter-spacing:-.04em;margin:0 0 5px}
+.partner-card p{font-size:12px;color:#7a8290;margin:0}
+.partner-card>span{font-size:17px;color:#2c6fff}
+
+/* Remove decorative English hierarchy and rebalance content pages */
+.agency-page .page-title{padding-top:105px;padding-bottom:105px}
+.agency-page .story-copy h2{margin-top:0}
+.agency-page .role h3{margin-top:auto;padding-top:75px}
+.agency-page .role p{margin-top:16px}
+.agency-page .vision h2{margin-top:0}
+.agency-page .collab>div:first-child h2{margin-top:0}
+
+@media(max-width:950px){
+  .compact-intro{grid-template-columns:1fr;gap:35px}
+  .compact-services{grid-template-columns:1fr 1fr}
+  .partner-list{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:760px){
+  .brand-hero{height:calc(100svh - 78px);min-height:580px;margin-top:8px;border-radius:28px}
+  .brand-hero-media img{object-position:57% center}
+  .brand-hero-shade{background:rgba(4,6,10,.76)}
+  .brand-hero-copy>img{width:105vw;margin:-35px 0}
+  .brand-hero-copy p{font-size:13px;line-height:1.8}
+  .scroll-hint{bottom:20px}
+  .compact-intro{margin:10px;padding:64px 22px 58px;border-radius:28px;background:#fff;gap:28px}
+  .compact-intro h1{font-size:45px;line-height:1.06}
+  .compact-intro p{font-size:14px}
+  .compact-services{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding:0 10px 25px;scrollbar-width:none}
+  .compact-services::-webkit-scrollbar{display:none}
+  .compact-service{flex:0 0 80vw;min-height:350px;border:0;border-radius:26px;scroll-snap-align:center}
+  .compact-footer{height:190px;margin:0 10px;padding:32px 20px 90px;border-radius:28px}
+  .compact-footer img{width:100px}
+  .partner-title{margin:10px;padding:62px 22px 48px;border:0;border-radius:28px;background:#fff}
+  .partner-title h1{font-size:44px}
+  .partner-title p{font-size:14px}
+  .partner-list{padding:10px 10px 70px;grid-template-columns:1fr;gap:9px}
+  .partner-card{min-height:110px;padding:18px;grid-template-columns:62px 1fr auto;border-radius:20px}
+  .partner-card>img{width:62px;height:62px}
+  .partner-card h2{font-size:19px}
+  .partner-card p{font-size:11px}
+  .agency-page .page-title{padding-top:72px;padding-bottom:65px}
+  .agency-page .role h3{padding-top:55px}
+}

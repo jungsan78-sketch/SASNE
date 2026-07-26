@@ -6,13 +6,13 @@ if(menuButton&&menu){
   menuButton.addEventListener('click',()=>{
     const open=menu.classList.toggle('open');
     menuButton.setAttribute('aria-expanded',String(open));
-    menuButton.textContent=open?'CLOSE':'MENU';
+    menuButton.textContent=open?'닫기':'메뉴';
   });
   document.addEventListener('keydown',(event)=>{
     if(event.key==='Escape'&&menu.classList.contains('open')){
       menu.classList.remove('open');
       menuButton.setAttribute('aria-expanded','false');
-      menuButton.textContent='MENU';
+      menuButton.textContent='메뉴';
       menuButton.focus();
     }
   });
@@ -33,7 +33,7 @@ const mobileItems=[
   ['index.html','⌂','홈'],
   ['about.html','○','소개'],
   ['creators.html','◉','파트너'],
-  ['works.html','▦','워크'],
+  ['works.html','▦','작업'],
   ['contact.html','↗','문의']
 ];
 const mobileDock=document.createElement('nav');
