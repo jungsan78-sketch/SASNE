@@ -27,3 +27,18 @@ if('IntersectionObserver' in window){
   },{threshold:.12});
   revealItems.forEach((item)=>observer.observe(item));
 }else{revealItems.forEach((item)=>item.classList.add('is-visible'))}
+
+const currentPage=location.pathname.split('/').pop()||'index.html';
+const mobileItems=[
+  ['index.html','⌂','홈'],
+  ['about.html','○','소개'],
+  ['works.html','▦','프로젝트'],
+  ['contact.html','↗','문의']
+];
+const mobileDock=document.createElement('nav');
+mobileDock.className='mobile-dock';
+mobileDock.setAttribute('aria-label','모바일 주요 메뉴');
+mobileDock.innerHTML=mobileItems.map(([href,icon,label])=>
+  `<a href="./${href}"${currentPage===href?' class="active"':''}><i>${icon}</i><span>${label}</span></a>`
+).join('');
+document.body.appendChild(mobileDock);
